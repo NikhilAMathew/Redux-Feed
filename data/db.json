@@ -1,0 +1,149 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "I0220",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "username": "asd",
+      "password": "123"
+    },
+    {
+      "id": "f51rKwlIgt7dXk-j_bQ9Z",
+      "username": "abc",
+      "password": "123"
+    }
+  ],
+  "posts": [
+    {
+      "id": "jsDexr2iudxzykwkhVZSa",
+      "content": "  const handleGreetings = () => {\n    const hour = new Date().getHours();\n    if (hour < 12) return \"Good Morning\";\n    if (hour < 18) return \"Good Afternoon\";\n    return \"Good Evening\";\n  };",
+      "time": "2024-01-01T08:01:01.168Z",
+      "author": "asd",
+      "likes": 1,
+      "likedBy": [
+        "I0220"
+      ],
+      "comments": [
+        {
+          "id": "u1K9Uu29_wjt7BuRVaz_p",
+          "author": "I0220",
+          "time": "2024-06-07T08:01:22.481Z",
+          "text": "  const handleLogout = () => {     dispatch(authActions.logout());     localStorage.removeItem(\"user\");   };",
+          "likes": 1,
+          "likedBy": [
+            "asd"
+          ],
+          "isEdited": true
+        }
+      ]
+    },
+    {
+      "id": "IB9DY2J574yG2mVeRbSOQ",
+      "content": "          <ThumbsUp\n            size={18}\n            color={post.likedBy.includes(user?.username) ? \"#007bff\" : \"#333\"}\n            fill={post.likedBy.includes(user?.username) ? \"#007bff\" : \"none\"}\n          />",
+      "time": "2025-02-01T08:09:31.343Z",
+      "author": "I0220",
+      "likes": 2,
+      "likedBy": [
+        "I0220",
+        "asd"
+      ],
+      "comments": [
+        {
+          "id": "SytoPf8W17Uh_pVsJzlgr",
+          "author": "asd",
+          "time": "2025-02-07T08:10:03.217Z",
+          "text": "  const toggleReplyLike = (commentId) => {     if (user) {       dispatch(         toggleCommentLikeAsync({           postId: post.id,           commentId,           username: user.username,         })       );     }   };",
+          "likes": 1,
+          "likedBy": [
+            "I0220"
+          ]
+        },
+        {
+          "id": "oSfYbzowu5BV2i9RH-d4c",
+          "author": "I0220",
+          "time": "2025-02-07T08:10:31.027Z",
+          "text": "{formatTimeAgo(post.time)}",
+          "likes": 1,
+          "likedBy": [
+            "asd"
+          ]
+        },
+        {
+          "id": "l2GqeLEQB4kFiyLaePXj0",
+          "author": "asd",
+          "time": "2025-02-07T08:10:51.835Z",
+          "text": "  const formatTimeAgo = (timestamp) => {     const now = new Date();     const postTime = new Date(timestamp);     const secondsAgo = Math.floor((now - postTime) / 1000);      if (secondsAgo < 60) return `${secondsAgo}s`;     const minutesAgo = Math.floor(secondsAgo / 60);     if (minutesAgo < 60) return `${minutesAgo}m`;     const hoursAgo = Math.floor(minutesAgo / 60);     if (hoursAgo < 24) return `${hoursAgo}h`;     const daysAgo = Math.floor(hoursAgo / 24);     if (daysAgo < 7) return `${daysAgo}d`;     const weeksAgo = Math.floor(daysAgo / 7);     if (weeksAgo < 52) return `${weeksAgo}w`;     const yearsAgo = Math.floor(weeksAgo / 52);     return `${yearsAgo}y`;   };",
+          "likes": 1,
+          "likedBy": [
+            "I0220"
+          ]
+        },
+        {
+          "id": "Mzc3HOD_me8oTxr1FnVcK",
+          "author": "I0220",
+          "time": "2025-02-07T08:11:26.941Z",
+          "text": "thank you.",
+          "likes": 1,
+          "likedBy": [
+            "asd"
+          ],
+          "isEdited": true
+        },
+        {
+          "id": "UqgCRGOwYZY6XseFt0pjk",
+          "author": "asd",
+          "time": "2025-02-07T08:11:45.095Z",
+          "text": ":)",
+          "likes": 1,
+          "likedBy": [
+            "I0220"
+          ]
+        },
+        {
+          "id": "ECUNrCIhSwhpvKGIw6A3T",
+          "author": "asd",
+          "time": "2025-02-07T08:11:58.358Z",
+          "text": ":D",
+          "likes": 1,
+          "likedBy": [
+            "I0220"
+          ]
+        },
+        {
+          "id": "jZgFMB1YgyJRBt4jIMroU",
+          "author": "asd",
+          "time": "2025-02-07T10:23:26.352Z",
+          "text": "thank you",
+          "likes": 0,
+          "likedBy": []
+        }
+      ],
+      "isEdited": true
+    },
+    {
+      "id": "KtaJYSMVnkL3Ct21DPrLA",
+      "content": "Hello guys",
+      "time": "2025-02-07T13:56:57.767Z",
+      "author": "I0220",
+      "likes": 1,
+      "likedBy": [
+        "asd"
+      ],
+      "comments": [
+        {
+          "id": "Vduqv8FBipN9jle9ybT0Y",
+          "author": "asd",
+          "time": "2025-02-07T14:24:57.244Z",
+          "text": "hiii",
+          "likes": 1,
+          "likedBy": [
+            "I0220"
+          ]
+        }
+      ]
+    }
+  ]
+}

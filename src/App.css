@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Styles */
+body {
+    font-family: "Poppins", serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.switch-btn {
+    font-size: 16px;
+    border: none;
+    background: none;
+    color: blue;
+    cursor: pointer;
+}
+
+/* Home Container */
+.home-container {
+    margin: auto;
+    width: 90%;
+    max-width: 750px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.header h2 {
+    font-size: 18px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.header-btn {
+    background-color: none;
+    color: #333;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Post Box */
+.post-box {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-box textarea {
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.post-btn {
+    background: #007bff;
+    color: white;
+    width: 6em;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-btn:hover {
+    background: #0056b3;
+}
+
+.upload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Posts Container */
+.posts {
+    margin-top: 20px;
+}
+
+/* Post Card */
+.post-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+.post-card p {
+    margin: 5px 0;
+    color: #444;
+    word-wrap: break-word;
+}
+
+.post-card strong {
+    color: #222;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+}
+
+.post-actions button:hover {
+    opacity: 0.7;
+}
+
+.upload-container {
+    margin-top: 10px;
+}
+
+.image-preview {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Comments */
+.comments {
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #bbb;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 6px;
+    background: #f8f8f8;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.comment p {
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.comment strong {
+    color: #007bff;
+}
+
+.comment-actions {
+    display: flex;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.like-btn:hover {
+    opacity: 0.7;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.delete-btn:hover {
+    opacity: 0.7;
+}
+
+/* Reply Box */
+.reply-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.reply-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.reply-box button {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reply-box button:hover {
+    background: #0056b3;
+}
+
+.view-replies-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.view-replies-btn:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .logout-btn {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .post-box textarea {
+        font-size: 13px;
+        height: 70px;
+    }
+
+    .post-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comment-actions {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h2 {
+        font-size: 14px;
+    }
+
+    .header-btn {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .post-box textarea {
+        font-size: 12px;
+        height: 60px;
+    }
+
+    .post-actions button {
+        font-size: 14px;
+    }
+
+    .comment p {
+        font-size: 12px;
+    }
+
+    .comment-actions button {
+        font-size: 14px;
+    }
+
+    .reply-box input {
+        font-size: 12px;
+    }
+
+    .reply-box button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+/* Add to your existing CSS file */
+.notification-wrapper {
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #333;
+    border-radius: 50%;
+    padding: 4px 2px;
+    font-size: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+    z-index: 1000;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #666;
+    border-radius: 4px;
+}
+
+.action-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+.notification-item.unread {
+    background-color: #f0f7ff;
+}
+
+.notification-item p {
+    margin: 0;
+    padding-right: 24px;
+    font-size: 14px;
+}
+
+.notification-time {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.delete-notification {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.notification-item:hover .delete-notification {
+    opacity: 1;
+}
+
+.no-notifications {
+    padding: 16px;
+    text-align: center;
+    color: #666;
+}

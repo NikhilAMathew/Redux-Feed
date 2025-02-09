@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+** Make it only as study material..
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Social Media Post App  
 
-## Available Scripts
+This is a **social media post application** built using **React, Redux Toolkit, and JSON Server**. The app allows users to post thoughts, like and comment on posts, and receive real-time updates.
 
-In the project directory, you can run:
+## Features  
 
-### `npm start`
+- **User Authentication**:  
+  - Signup and login functionality  
+  - Stores user data in local storage  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Posts Management**:  
+  - Create, edit, and delete posts  
+  - Like/unlike posts  
+  - View all posts  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Comments System**:  
+  - Add comments to posts  
+  - Edit and delete comments  
+  - Like/unlike comments  
 
-### `npm test`
+- **Real-Time Updates**:  
+  - Updates posts and comments dynamically  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Data Storage**:  
+  - Uses **JSON Server** (`http://localhost:5000/posts`) instead of local storage  
 
-### `npm run build`
+## Technologies Used  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**:  
+  - React  
+  - Redux Toolkit  
+  - React Hooks (`useState`, `useEffect`, `useDispatch`, `useSelector`)  
+  - Lucide React Icons  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Backend (Mock API)**:  
+  - JSON Server for data persistence  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started  
 
-### `npm run eject`
+### Prerequisites  
+- Node.js installed on your system  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**  
+   ```sh
+   git clone https://github.com/your-repo/social-media-post-app.git
+   cd social-media-post-app
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install dependencies:**  
+   ```sh
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Start JSON Server:**  
+   ```sh
+   json-server --watch db.json --port 5000
+   ```
 
-## Learn More
+4. **Run the React App:**  
+   ```sh
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### JSON Server Configuration  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Ensure **db.json** is correctly structured:  
+  ```json
+  {
+    "posts": [
+      {
+        "id": "1",
+        "content": "Hello, world!",
+        "author": "JohnDoe",
+        "time": "2025-02-09T10:00:00Z",
+        "likes": 5,
+        "likedBy": ["JaneDoe"],
+        "comments": [
+          {
+            "id": "101",
+            "author": "JaneDoe",
+            "text": "Great post!",
+            "likes": 2,
+            "likedBy": ["JohnDoe"]
+          }
+        ]
+      }
+    ]
+  }
+  ```
 
-### Code Splitting
+## API Endpoints  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **GET /posts** - Fetch all posts  
+- **POST /posts** - Create a new post  
+- **PUT /posts/:id** - Update a post  
+- **DELETE /posts/:id** - Delete a post  
 
-### Analyzing the Bundle Size
+## Future Improvements  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- User authentication with a backend  
+- Real-time WebSocket-based updates  
+- Profile pages for users  
+- Image upload feature  
 
-### Making a Progressive Web App
+## License  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source. Feel free to modify and contribute!
